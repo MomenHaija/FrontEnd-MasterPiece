@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>Modern Admin Dashboard</title>
+    <link rel="stylesheet" href="../Admin/style.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <style>
+                .btn{
+            border-radius: 3px;
+            padding: 5px;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            font-size: 18px;
+        }
+        .btn-primary {
+            background: var(--main-color);
+    color: #fff;
+    height: 37px;
+    border-radius: 4px;
+    padding: 0rem 1rem;
+    border: none;
+    font-weight: 600;
+    color: #fff !important;
+}
+
+        .btn-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+.btn-info {
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+        .busy{
+            color: red;
+
+        }
+        .available{
+            color: green;
+        }
+    </style>
+
+</head>
+<body>
+   <input type="checkbox" id="menu-toggle">
+   <div class="sidebar">
+    <div class="side-header">
+        <h3>AU<span>TOLOAD</span></h3>
+    </div>
+    
+    <div class="side-content">
+        <div class="profile">
+            <div class="profile-img bg-img" style="background-image: url(../Admin/img/280067149_2498246926978449_914632831927401058_n.jpg)"></div>
+            <h4>Momen Abu Alhaija</h4>
+            <small>Developer</small>
+        </div>
+
+        <div class="side-menu">
+            <ul>
+                <li>
+                   <a href="dashadmin.html">
+                        <span class="las la-home"></span>
+                        <small>Dashboard</small>
+                    </a>
+                </li>
+                <li>
+                   <a href="Users.html" >
+                        <span class="las la-user-alt"></span>
+                        <small>Users</small>
+                    </a>
+                </li>
+                <li>
+                   <a href="drivers.html">
+                        <span class="las la-user-astronaut"></span>
+                        <small>Drivers</small>
+                    </a>
+                </li>
+                <li>
+                   <a href="truck.html" class="active">
+                        <span class="las la-truck"></span>
+                        <small>Trucks</small>
+                    </a>
+                </li>
+                <li>
+                   <a href="orders.html" >
+                        <span class="las la-shopping-cart"></span>
+                        <small>Orders</small>
+                    </a>
+                </li>
+                <li>
+                   <a href="tasks.html">
+                        <span class="las la-tasks"></span>
+                        <small>Tasks</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="feedbck.html"  > 
+                         <span class="las la-comment"></span>
+                         <small>Feedback</small>
+                     </a>
+                 </li>
+                 <li>
+                    <a href="Price.html"  > 
+                         <span class="las la-dollar-sign"></span>
+                         <small>Price</small>
+                     </a>
+                 </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    <div class="main-content">
+        
+        <header>
+            <div class="header-content">
+                <label for="menu-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+                
+                <div class="header-menu">
+                   
+                    
+                    <div class="user">
+                        <div class="bg-img" style="background-image: url(img/1.jpeg)"></div>
+                        
+                        <span class="las la-power-off"></span>
+                        <span>Logout</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            
+            <div class="page-header">
+                <h1>Trucks</h1>
+                <small>Home / Trucks</small>
+            </div>
+            
+            <div class="page-content">
+                
+                <div class="records table-responsive">
+
+                    <!-- <div class="record-header">
+                        <div class="add">
+                            <span>Entries</span>
+                            <select name="" id="">
+                                <option value="">ID</option>
+                            </select>
+                            <button>Add Truck</button>
+                        </div>
+
+                        
+                        <div class="">
+                            <input type="search" placeholder="Search" style="margin:0;height: 33px !important;"  >
+                            <input type="submit" width="10px"  style="margin:0;" value="search" class="btn btn-info">
+                         </div>
+                    </div> -->
+
+                    <div>
+                        <table width="100%">
+                            <thead>
+                                <tr>
+                                    <th>vehicle plate</th>
+                                    <th>Image vehicle </th>
+                                    <th>category vehicle </th>
+                                    <th>type vehicle </th>
+                                    <th>vehicle Name</th>
+                                    <th>Model</th>
+                                    <th>Driver</th>
+                                    <th>ACTIONS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>60-68945</td>
+                                    <td>
+                                        <img src="../images/3-4TonPickup.png" width="200px" height="150px">
+                                       
+                                    </td>
+                                    <td>
+                                        Pickup
+                                    </td>
+                                    <td>
+                                        3/4 Ton Pickup
+                                    </td>
+                                    <td>
+                                        chevrolet silverado
+                                    </td>
+                                    <td>
+                                            2022
+                                    </td>
+                                    <td>
+                                        <div class="client">
+                                            <div class="client-img bg-img" style="background-image: url(../Admin/img/2334308.png)"></div>
+                                             <div class="client-info">
+                                                 <h4>Exty Bruno</h4>
+                                                 <small>exty@crossover.org</small>
+                                             </div>
+                                         </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" value="Edit" class="btn btn-success">Select</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>60-22380</td>
+                                    <td>
+                                        <img src="../images/HalfTonPickup.png" width="200px" height="100px">
+                                        
+                                    </td>
+                                    <td>
+                                       Pickup
+                                    </td>
+                                    <td>
+                                        1/2 Ton Pickup
+                                    </td>
+                                    <td>
+                                        chevrolet silverado
+                                    </td>
+                                    <td>
+                                            2019
+                                    </td>
+                                    <td>
+                                        <div class="client">
+                                            <div class="client-img bg-img" style="background-image: url(../Admin/img/2816078.png)"></div>
+                                             <div class="client-info">
+                                                 <h4>Exty Bruno</h4>
+                                                 <small>exty@crossover.org</small>
+                                             </div>
+                                         </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" value="Edit" class="btn btn-success">Select</button>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>71-10828</td>
+                                    <td>
+                                       <img src="../images/mediumtruck.png" width="200px" height="150px">
+                                    </td>
+                                    <td>
+                                        mini  truck
+                                    </td>
+                                    <td>
+                                        1 Ton pickup
+                                    </td>
+                                    <td>
+                                        Toyota Xtra Cab Deluxe
+
+                                    </td>
+                                    <td>
+                                        2021
+                                    </td>
+                                    <td>
+                                        <div class="client">
+                                            <div class="client-img bg-img" style="background-image: url(../Admin/img/Emoji-Police-Officer-Medium-Dark-Skin-Tone.png)"></div>
+                                             <div class="client-info">
+                                                 <h4>Exty Bruno</h4>
+                                                 <small>exty@crossover.org</small>
+                                             </div>
+                                         </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" value="Edit" class="btn btn-success">Select</button>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>51-47556</td>
+                                    <td>
+                                       <img src="../images/Compact Cargo Van (1).png" width="200px" height="150px">
+                                    </td>
+                                    <td>
+                                       Van
+                                    </td>
+                                    <td>
+                                        Compact Cargo Van
+                                    </td>
+                                    <td>
+                                        Mercedes-Benz Metris
+                                    </td>
+                                    <td>
+                                        2017
+                                    </td>
+                                    <td>
+                                        <div class="client">
+                                            <div class="client-img bg-img" style="background-image: url(../Admin/img/istockphoto-586181774-612x612.jpg)"></div>
+                                             <div class="client-info">
+                                                 <h4>Andrew Bruno</h4>
+                                                 <small>bruno@crossover.org</small>
+                                             </div>
+                                         </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" value="Edit" class="btn btn-success">Select</button>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>10-23456</td>
+                                    <td>
+                                       <img src="../images/Heavy Duty Cargo Van.png" width="200px" height="100px">
+                                    </td>
+                                    <td>
+                                        Van
+                                    </td>
+                                    <td>
+                                        Duty XL Cargo Van
+                                    </td>
+                                    <td>
+                                        Ford Transit connect XLT
+                                    </td>
+                                    <td>
+                                        2015
+                                    </td>
+                                    <td>
+                                        <div class="client">
+                                            <div class="client-img bg-img" style="background-image: url(../Admin/img/Twemoji2_1f468-1f3fe-200d-2708-fe0f.svg.png)"></div>
+                                             <div class="client-info">
+                                                 <h4>Exty Bruno</h4>
+                                                 <small>exty@crossover.org</small>
+                                             </div>
+                                         </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" value="Edit" class="btn btn-success">Select</button>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>70-23456</td>
+                                    <td>
+                                        <img src="../images/Cargo Van.png" width="200px" height="150px">
+                                    </td>
+                                    <td>
+                                       Van
+                                    </td>
+                                    <td>
+                                        Cargo Van
+                                    </td>
+                                    <td>
+                                        TRANSIT CREW VAN
+                                    </td>
+                                    <td>
+                                        2023
+                                    </td>
+                                   
+                                    <td>
+                                        <div class="client">
+                                            <div class="client-img bg-img" style="background-image: url(../Admin/img/2334308.png)"></div>
+                                             <div class="client-info">
+                                                 <h4>Exty Bruno</h4>
+                                                 <small>exty@crossover.org</small>
+                                             </div>
+                                         </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" value="Edit" class="btn btn-success">Select</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>70-10836</td>
+                                    <td>
+                                      <img src="../images/15'-16' Parcel Van.png" width="200px" height="150px">
+                                    </td>
+                                    <td>
+                                        Truck
+                                    </td>
+                                    <td>
+                                        16' Cabover Truck
+                                    </td>
+                                    <td>
+                                        ISUZU Cabover Truck
+                                    </td>
+                                    <td>
+                                        2023
+                                    </td>
+                                    <td>
+                                        <div class="client">
+                                            <div class="client-img bg-img" style="background-image: url(../Admin/img/Emoji-Police-Officer-Medium-Dark-Skin-Tone.png)"></div>
+                                             <div class="client-info">
+                                                 <h4>Exty Bruno</h4>
+                                                 <small>exty@crossover.org</small>
+                                             </div>
+                                         </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" value="Edit" class="btn btn-success">Select</button>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>99-12345</td>
+                                    <td>
+                                       <img src="../images/24' Box Truck.png" width="200px" height="150px">
+                                    </td>
+                                    <td>
+                                       Truck
+                                    </td>
+                                    <td>
+                                        24' Box Truck
+                                    </td>
+                                    <td>
+                                        Freightliner M2
+                                    </td>
+                                    <td>
+                                        2005
+                                    </td>
+                                    <td>
+                                        <div class="client">
+                                            <div class="client-img bg-img" style="background-image: url(../Admin/img/istockphoto-586181774-612x612.jpg)"></div>
+                                             <div class="client-info">
+                                                 <h4>Exty Bruno</h4>
+                                                 <small>exty@crossover.org</small>
+                                             </div>
+                                         </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" value="Edit" class="btn btn-success">Select</button>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>96-12345</td>
+                                    <td>
+                                      <img src="../images/26' Box Truck.png" width="200px" height="150px">
+                                    </td>
+                                    <td>
+                                       Truck
+                                    </td>
+                                    <td>
+                                        26' Box Truck
+                                    </td>
+                                    <td>
+                                        KenWorth T270
+                                    </td>
+                                    <td style="text-align: center;">
+                                        2020
+                                    </td>
+                                    <td>
+                                        <div class="client">
+                                            <div class="client-img bg-img" style="background-image: url(../Admin/img/2816078.png)"></div>
+                                             <div class="client-info">
+                                                 <h4>Exty Bruno</h4>
+                                                 <small>exty@crossover.org</small>
+                                             </div>
+                                         </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" value="Edit" class="btn btn-success">Select</button>
+                                        
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

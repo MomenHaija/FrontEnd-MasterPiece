@@ -1,0 +1,193 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Autoload</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700"> 
+   
+      <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+      <link rel="stylesheet" href="css/animate.css">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="css/magnific-popup.css">
+      <link rel="stylesheet" href="css/aos.css">
+      <link rel="stylesheet" href="css/ionicons.min.css">
+      <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+      <link rel="stylesheet" href="css/jquery.timepicker.css">
+      <link rel="stylesheet" href="css/flaticon.css">
+      <link rel="stylesheet" href="css/icomoon.css">
+      <link rel="stylesheet" href="css/style.css">
+  
+      <link rel="stylesheet" href="from/fonts/icomoon/style.css">
+      <link rel="stylesheet" href="from/fonts/flaticon/font/flaticon.css">
+      <link rel="stylesheet" href="from/css/style.css">
+      <link rel="stylesheet" href="from/css/aos.css">
+  
+  
+    </head>
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-dark  ftco-navbar-light scrolled awake" id="ftco-navbar">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Auto<span>load</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+          </button>
+  
+          <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+              <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+              <li class="nav-item "><a href="ourTrucks.html" class="nav-link">Our trucks</a></li>
+              <li class="nav-item "><a href="profile.html" class="nav-link">My profile</a></li>
+              <li class="nav-item "><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <!-- END nav -->
+    
+    <section class="ftco-section contact-section">
+        <h2 style="text-align: center; color:#fc983c;margin-bottom: 5%;" >You have to pay 5 dinars to confirm the reservation</h2>
+        <div class="container">
+    <div id="smart-button-container">
+        <div style="text-align: center;">
+          <div id="paypal-button-container"  ></div>
+        </div>
+      </div>
+        </div>
+    
+    <script src="https://www.paypal.com/sdk/js?client-id=AYOPFmJHKEp34Obn8Gp5EJhzo8qOotnJl2Y6lj3E72wh3UcV-V-gVaGPkM-bR-XvEfuvN5ZhSeOgZk6R&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+    <script>
+      function initPayPalButton() {
+        paypal.Buttons({
+          style: {
+            shape: 'rect',
+            color: 'black',
+            layout: 'vertical',
+            label: 'paypal',
+  
+          },
+  
+          createOrder: function(data, actions) {
+            return actions.order.create({
+              purchase_units: [{"amount":{"currency_code":"USD","value":5}}]
+            });
+          },
+  
+          onApprove: function(data, actions) {
+            return actions.order.capture().then(function(orderData) {
+  
+              // Full available details
+              console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+  
+              // Show a success message within this page, e.g.
+              const element = document.getElementById('paypal-button-container');
+              element.innerHTML = '';
+              element.innerHTML = '<h3>Thank you for your payment!</h3>';
+  
+              // Or go to another URL:  actions.redirect('thank_you.html');
+  
+            });
+          },
+  
+          onError: function(err) {
+            console.log(err);
+          }
+        }).render('#paypal-button-container');
+      }
+      initPayPalButton();
+    </script>
+    </section>
+
+    <footer class="site-footer" style="padding:1rem 2rem;">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-4 ">
+                <h3>About US</h3>
+                <p>AUTOLOAD transports your furniture quickly<br> 
+                  and safely  inside Jordan while  preserving <br> the furniture carefully and with high discretion</p>
+              </div>
+              
+              <div class="col-md-3">
+                <ul class="list-unstyled">
+                  <h3>Quick Link</h3>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                  <li><a href="booking.html">Booking</a></li>
+
+                </ul>
+              </div>
+              <div class="col-md-3">
+                <h3>Contact Us</h3>
+                <a href="https://www.facebook.com/momen.abualhaija" class="pl-3 pr-3"><i class="fa fa-phone" style="font-size: 20px;"></i><span style="font-size: 20px;">    +962 772 587 234</span></a><br>
+                <a href="https://www.instagram.com/momen_abu_alhaija/" class="pl-3 pr-3"><i class="fa fa-map-marker" style="font-size: 20px;"></i><span style="font-size: 20px;">    Jordan Amman-Authority</span></a><br>
+                <a href="https://www.facebook.com/momen.abualhaija" class="pl-3 pr-3"><i class="fab fa-google" aria-hidden="true"  style="font-size: 20px;"></i><span style="font-size: 20px;">    AutoLoad@gmail.com</span></a></a>
+              </div>
+              <div class="col-md-2">
+                <h3>Follow US</h3>
+                <a href="https://www.facebook.com/momen.abualhaija" class="pl-3 pr-3"><span class="icon-facebook" style="font-size: 35px;"></span></a><br>
+                <a href="https://www.instagram.com/momen_abu_alhaija/" class="pl-3 pr-3"><span class="icon-instagram" style="font-size: 35px;"></span></a><br>
+                <a href="https://www.facebook.com/momen.abualhaija" class="pl-3 pr-3"><span class="icon-linkedin" style="font-size: 35px;"></span></a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+    
+      </div>
+    </footer>
+
+    
+  
+
+  <!-- loader -->
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    function initMap() {
+      var myLatLng = {lat:32, lng:35.90};
+  
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: myLatLng
+      });
+  
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'Hello World!'
+      });
+    }
+  </script>
+  
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAT1-pistFpBY5P6u-0x0FC5AOlp8GeYs&callback=initMap">
+  </script>
+  
+  
+  
+  
+  
+  </body>
+</html>
